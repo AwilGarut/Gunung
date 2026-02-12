@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jejak Pendaki | Pahril Lesmana</title>
-    
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
@@ -18,6 +16,9 @@
             <ul class="nav-links">
                 <li><a href="#home">Beranda</a></li>
                 <li><a href="#perjalanan">Perjalanan</a></li>
+                <li class="dark-mode-toggle" id="dark-mode-toggle">
+                    <i class="fa-solid fa-moon"></i>
+                </li>
             </ul>
         </div>
     </nav>
@@ -25,7 +26,7 @@
     <header class="hero" id="home">
         <div class="hero-content">
             <h1>Catatan dari Ketinggian</h1>
-            <p>Arsip 13 puncak yang telah berhasil dijejaki.</p>
+            <p>Arsip 13 puncak yang telah berhasil dijejaki oleh Pahril Lesmana.</p>
             <a href="#perjalanan" class="btn-cta">Lihat Daftar Gunung</a>
         </div>
     </header>
@@ -38,153 +39,158 @@
 
         <div class="grid-perjalanan">
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/artapela.jpeg" class="card-img" alt="Gunung Artapela">
-                </div>
+                <div class="card-img-container"><img src="assets/img/artapela.jpeg" class="card-img" alt="Artapela"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Bandung</span>
+                    <span class="location">Bandung</span>
                     <h3>Gunung Artapela</h3>
                     <p>Padang rumput luas yang menenangkan di perbatasan Bandung-Garut.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/canar.jpeg" class="card-img" alt="Gunung Canar">
-                </div>
+                <div class="card-img-container"><img src="assets/img/canar.jpeg" class="card-img" alt="Canar"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Garut</span>
+                    <span class="location">Garut</span>
                     <h3>Gunung Canar</h3>
-                    <p>Menjelajahi jalur pendakian yang masih asri dan alami.</p>
+                    <p>Menjelajahi jalur pendakian yang masih asri dan alami di wilayah Garut.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/cermai.jpeg" class="card-img" alt="Gunung Ciremai">
-                </div>
+                <div class="card-img-container"><img src="assets/img/cermai.jpeg" class="card-img" alt="Cermai"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Kuningan</span>
+                    <span class="location">Kuningan</span>
                     <h3>Gunung Ciremai</h3>
-                    <p>Atap Jawa Barat yang menantang kekuatan fisik dan mental.</p>
+                    <p>Atap Jawa Barat yang menantang kekuatan fisik dan mental pendaki.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/cikuray.jpeg" class="card-img" alt="Gunung Cikuray">
-                </div>
+                <div class="card-img-container"><img src="assets/img/cikuray.jpeg" class="card-img" alt="Cikuray"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Garut</span>
+                    <span class="location">Garut</span>
                     <h3>Gunung Cikuray</h3>
-                    <p>Jalur vertikal legendaris menuju puncak tertinggi di Garut.</p>
+                    <p>Jalur vertikal legendaris menuju puncak tertinggi di wilayah Garut.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/gede.jpeg" class="card-img" alt="Gunung Gede">
-                </div>
+                <div class="card-img-container"><img src="assets/img/gede.jpeg" class="card-img" alt="Gede"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Cianjur</span>
+                    <span class="location">Cianjur</span>
                     <h3>Gunung Gede</h3>
-                    <p>Keindahan abadi di Alun-Alun Suryakencana.</p>
+                    <p>Keindahan abadi di Alun-Alun Suryakencana dengan hamparan Edelweiss.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/haruman.jpeg" class="card-img" alt="Gunung Haruman">
-                </div>
+                <div class="card-img-container"><img src="assets/img/haruman.jpeg" class="card-img" alt="Haruman"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Garut</span>
+                    <span class="location">Garut</span>
                     <h3>Gunung Haruman</h3>
-                    <p>Puncak dengan pemandangan yang memanjakan mata.</p>
+                    <p>Puncak dengan pemandangan lanskap Garut yang memanjakan mata.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/pangradinan.jpeg" class="card-img" alt="Gunung Pangradinan">
-                </div>
+                <div class="card-img-container"><img src="assets/img/pangradinan.jpeg" class="card-img" alt="Pangradinan"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Bandung</span>
+                    <span class="location">Bandung</span>
                     <h3>Gunung Pangradinan</h3>
-                    <p>Bukit cantik dengan hamparan rumput seperti sabana.</p>
+                    <p>Bukit cantik dengan hamparan rumput sabana yang sangat luas.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/pangrango.jpeg" class="card-img" alt="Gunung Pangrango">
-                </div>
+                <div class="card-img-container"><img src="assets/img/pangrango.jpeg" class="card-img" alt="Pangrango"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Bogor</span>
+                    <span class="location">Bogor</span>
                     <h3>Gunung Pangrango</h3>
-                    <p>Mencari ketenangan di Lembah Mandalawangi.</p>
+                    <p>Mencari ketenangan batin di syahdu-nya Lembah Mandalawangi.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/papandayan.jpeg" class="card-img" alt="Gunung Papandayan">
-                </div>
+                <div class="card-img-container"><img src="assets/img/papandayan.jpeg" class="card-img" alt="Papandayan"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Garut</span>
+                    <span class="location">Garut</span>
                     <h3>Gunung Papandayan</h3>
-                    <p>Gunung ramah pendaki dengan kawah dan hutan mati.</p>
+                    <p>Gunung ramah pendaki dengan pesona kawah aktif dan hutan mati.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/sagara.jpeg" class="card-img" alt="Gunung Sagara">
-                </div>
+                <div class="card-img-container"><img src="assets/img/sagara.jpeg" class="card-img" alt="Sagara"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Garut</span>
+                    <span class="location">Garut</span>
                     <h3>Gunung Sagara</h3>
-                    <p>Melihat pesona Talaga Bodas dari titik tertinggi.</p>
+                    <p>Melihat pesona Talaga Bodas yang memukau dari titik ketinggian.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/slamet.jpeg" class="card-img" alt="Gunung Slamet">
-                </div>
+                <div class="card-img-container"><img src="assets/img/slamet.jpeg" class="card-img" alt="Slamet"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Jawa Tengah</span>
+                    <span class="location">Jawa Tengah</span>
                     <h3>Gunung Slamet</h3>
-                    <p>Atap Jawa Tengah yang megah dan berwibawa.</p>
+                    <p>Atap Jawa Tengah yang megah dengan medan pasir yang menantang.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/tampomas.jpeg" class="card-img" alt="Gunung Tampomas">
-                </div>
+                <div class="card-img-container"><img src="assets/img/tampomas.jpeg" class="card-img" alt="Tampomas"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Sumedang</span>
+                    <span class="location">Sumedang</span>
                     <h3>Gunung Tampomas</h3>
-                    <p>Eksplorasi batuan purba di puncak Sumedang.</p>
+                    <p>Eksplorasi keindahan batuan purba di puncak tertinggi Sumedang.</p>
                 </div>
             </article>
 
             <article class="card">
-                <div class="card-img-container">
-                    <img src="assets/img/guntur.jpeg" class="card-img" alt="Gunung Guntur">
-                </div>
+                <div class="card-img-container"><img src="assets/img/guntur.jpeg" class="card-img" alt="Guntur"></div>
                 <div class="card-content">
-                    <span class="location"><i class="fa-solid fa-location-dot"></i> Garut</span>
+                    <span class="location">Garut</span>
                     <h3>Gunung Guntur</h3>
-                    <p>Miniatur Semeru dengan tantangan pasir yang panas.</p>
+                    <p>Miniatur Semeru dengan tantangan jalur pasir ikonik di Garut.</p>
                 </div>
             </article>
-
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Pahril Lesmana. Dokumentasi Perjalanan Mendaki.</p>
+        <div class="footer-container">
+            <div class="footer-box">
+                <h3 class="footer-logo">Jejak Pahril</h3>
+                <p>Mendokumentasikan setiap langkah di puncak tertinggi Indonesia.</p>
+            </div>
+
+            <div class="footer-box">
+                <h4>Navigasi</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#perjalanan">List Gunung</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box">
+                <h4>Hubungi Saya</h4>
+                <div class="footer-contact">
+                    <a href="https://wa.me/6285720770009" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp
+                    </a>
+                    <a href="https://instagram.com/Awilll_25" target="_blank" class="contact-item">
+                        <i class="fa-brands fa-instagram"></i> Instagram
+                    </a>
+                    <a href="mailto:pahrillesmana544@gmail.com" class="contact-item">
+                        <i class="fa-solid fa-envelope"></i> Email
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pahril Lesmana. Dibuat dengan semangat petualang.</p>
+        </div>
     </footer>
 
     <script src="script.js"></script>
