@@ -1,4 +1,4 @@
-/* Variabel Desain Modern */
+/* Variabel Desain */
 :root {
     --primary: #1b4332;
     --accent: #40916c;
@@ -10,7 +10,7 @@
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* Variabel Dark Mode */
+/* Dark Mode */
 [data-theme="dark"] {
     --bg-light: #121212;
     --white: #1e1e1e;
@@ -35,84 +35,60 @@ body {
     transition: background-color 0.4s, color 0.4s;
 }
 
-/* --- NAVIGASI (POSISI DIPERBAIKI) --- */
+/* --- NAVIGASI RESPONSIVE --- */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     z-index: 1000;
     transition: all 0.4s ease;
-    /* Gradasi agar teks putih terbaca jelas di background terang */
     background: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
 }
 
-/* Saat di-scroll (Navbar Aktif) */
 .nav-active {
     background: var(--glass);
     backdrop-filter: blur(12px);
-    padding: 1rem 0;
     box-shadow: var(--shadow-soft);
+    padding: 0.8rem 0;
 }
 
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between; /* Logo di kiri, Menu di kanan */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .logo {
     font-size: 1.5rem;
     font-weight: 800;
     text-decoration: none;
-    color: #ffffff; /* Warna putih agar terlihat */
+    color: #ffffff;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    transition: 0.3s;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 2rem;
     align-items: center;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #ffffff; /* Warna putih agar terlihat */
+    color: #ffffff;
     font-weight: 600;
     text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    transition: 0.3s;
 }
 
-/* Warna Teks Saat Navbar Aktif (Background Putih) */
-.nav-active .logo {
-    color: var(--primary);
-    text-shadow: none;
-}
+.nav-active .logo { color: var(--primary); text-shadow: none; }
+.nav-active .nav-links a { color: var(--text-main); text-shadow: none; }
+.nav-active .dark-mode-toggle { color: var(--text-main); }
 
-.nav-active .nav-links a {
-    color: var(--text-main);
-    text-shadow: none;
-}
-
-.nav-active .nav-links a:hover {
-    color: var(--accent);
-}
-
-.dark-mode-toggle {
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #ffffff;
-    transition: 0.3s;
-}
-
-.nav-active .dark-mode-toggle {
-    color: var(--text-main);
-}
+.dark-mode-toggle { cursor: pointer; color: #ffffff; font-size: 1.2rem; }
 
 /* --- HERO SECTION --- */
 .hero {
@@ -124,17 +100,18 @@ nav {
     align-items: center;
     text-align: center;
     color: white;
+    padding: 0 20px;
 }
 
 .hero-content h1 {
-    font-size: clamp(2.5rem, 8vw, 4rem);
+    font-size: clamp(2rem, 8vw, 4rem);
     font-weight: 800;
+    margin-bottom: 1rem;
 }
 
 .btn-cta {
-    margin-top: 1.5rem;
     display: inline-block;
-    padding: 0.8rem 2.5rem;
+    padding: 0.8rem 2.2rem;
     background: var(--accent);
     color: white;
     text-decoration: none;
@@ -143,15 +120,10 @@ nav {
     transition: 0.3s;
 }
 
-.btn-cta:hover {
-    background: var(--primary);
-    transform: translateY(-3px);
-}
-
-/* --- GRID CARDS --- */
+/* --- GRID PERJALANAN (13 GUNUNG) --- */
 .container {
     max-width: 1200px;
-    margin: 5rem auto;
+    margin: 4rem auto;
     padding: 0 20px;
 }
 
@@ -167,10 +139,11 @@ nav {
     margin: 10px auto;
 }
 
+/* Grid otomatis menyesuaikan kolom */
 .grid-perjalanan {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
 .card {
@@ -181,57 +154,32 @@ nav {
     transition: 0.4s;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-}
-
-.card-img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
-
-.card-content {
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.location {
-    font-size: 0.8rem;
-    font-weight: 700;
-    color: var(--accent);
-    text-transform: uppercase;
-}
-
-.card-content h3 {
-    margin: 0.5rem 0;
-    color: var(--primary);
-}
-
-[data-theme="dark"] .card-content h3 {
-    color: var(--accent);
-}
+.card:hover { transform: translateY(-10px); }
+.card-img { width: 100%; height: auto; display: block; }
+.card-content { padding: 1.5rem; text-align: center; }
+.location { font-size: 0.75rem; font-weight: 700; color: var(--accent); text-transform: uppercase; }
+.card-content h3 { margin: 0.5rem 0; color: var(--primary); font-size: 1.3rem; }
+[data-theme="dark"] .card-content h3 { color: var(--accent); }
+.card-content p { font-size: 0.9rem; color: var(--text-muted); }
 
 /* --- BACK TO TOP --- */
 #backToTop {
     display: none;
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 25px;
+    right: 25px;
     z-index: 99;
-    border: none;
     background-color: var(--accent);
     color: white;
-    cursor: pointer;
-    padding: 15px;
+    border: none;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    width: 50px;
-    height: 50px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
-/* --- FOOTER (POSISI KONTAK DIPERBAIKI) --- */
+/* --- FOOTER RESPONSIVE --- */
 footer {
     background-color: var(--primary);
     color: rgba(255,255,255,0.8);
@@ -247,52 +195,36 @@ footer {
     padding: 0 20px;
 }
 
-.footer-box h4 {
-    color: white;
-    margin-bottom: 1rem;
-}
-
-.footer-contact {
-    display: flex;
-    flex-direction: column; /* Ikon menyusun ke bawah */
-    gap: 12px;
-}
-
-.contact-item {
-    text-decoration: none;
-    color: rgba(255,255,255,0.6);
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-.contact-item:hover {
-    color: white;
+.footer-box h4 { color: white; margin-bottom: 1.2rem; font-size: 1.1rem; }
+.footer-contact { display: flex; flex-direction: column; gap: 10px; }
+.contact-item { 
+    text-decoration: none; 
+    color: rgba(255,255,255,0.6); 
+    display: flex; 
+    align-items: center; 
+    gap: 10px; 
+    font-size: 0.9rem; 
 }
 
 .footer-bottom {
     text-align: center;
     margin-top: 2rem;
-    padding-top: 1rem;
+    padding-top: 1.5rem;
     border-top: 1px solid rgba(255,255,255,0.1);
     font-size: 0.8rem;
 }
 
-/* Responsif Mobile */
+/* --- MEDIA QUERIES (KUNCI RESPONSIVE) --- */
 @media (max-width: 768px) {
-    .nav-links {
-        display: none; /* Sembunyikan menu di HP agar tidak berantakan */
-    }
-    .hero-content h1 {
-        font-size: 2.5rem;
-    }
-    .footer-container {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-    .footer-contact {
-        align-items: center;
-    }
+    nav { padding: 1rem 0; }
+    .nav-links { display: none; } /* Sembunyikan menu di HP agar simpel */
+    .hero-content h1 { font-size: 2.5rem; }
+    .footer-container { text-align: center; }
+    .footer-contact { align-items: center; }
+    .container { margin: 2rem auto; }
+}
+
+@media (max-width: 480px) {
+    .grid-perjalanan { grid-template-columns: 1fr; } /* Satu kolom di layar sangat kecil */
+    .hero-content h1 { font-size: 2rem; }
 }

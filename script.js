@@ -1,55 +1,16 @@
-// 1. Inisialisasi Tema (Mengingat pilihan user)
-const body = document.documentElement;
-const currentTheme = localStorage.getItem('theme') || 'light';
-body.setAttribute('data-theme', currentTheme);
-
-const toggle = document.getElementById('dark-mode-toggle');
-const icon = toggle.querySelector('i');
-if (currentTheme === 'dark') icon.className = 'fa-solid fa-sun';
-
-// 2. Logika Dark Mode
-toggle.addEventListener('click', () => {
-    let theme = body.getAttribute('data-theme');
-    if (theme === 'dark') {
-        body.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
-        icon.className = 'fa-solid fa-moon';
-    } else {
-        body.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-        icon.className = 'fa-solid fa-sun';
-    }
-});
-
-// 3. Scroll Reveal Animation & Navbar Effect
-const revealElements = () => {
-    const cards = document.querySelectorAll('.card');
-    cards.forEach(card => {
-        const windowHeight = window.innerHeight;
-        const revealTop = card.getBoundingClientRect().top;
-        const revealPoint = 100;
-        
-        if (revealTop < windowHeight - revealPoint) {
-            card.classList.add('active');
-        }
-    });
-};
-
+// --- NAVBAR & BACK TO TOP LOGIC ---
+const nav = document.getElementById('main-nav');
 const backToTopBtn = document.getElementById("backToTop");
 
 window.addEventListener('scroll', () => {
-    // Navbar effect
-    const nav = document.getElementById('main-nav');
+    // Efek Navbar
     if (window.scrollY > 50) {
         nav.classList.add('nav-active');
     } else {
         nav.classList.remove('nav-active');
     }
 
-    // Reveal animation
-    revealElements();
-
-    // Back to top logic
+    // Munculkan Tombol Back to Top
     if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
         backToTopBtn.style.display = "block";
     } else {
@@ -57,13 +18,17 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// 4. Back to Top Click
+// Klik Back to Top
 backToTopBtn.addEventListener("click", () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Jalankan reveal saat halaman dimuat pertama kali
-window.onload = revealElements;
+// --- DARK MODE LOGIC ---
+const toggle = document.getElementById('dark-mode-toggle');
+const body = document.documentElement;
+
+toggle.addEventListener('click', () => {
+    const isDark = body.getAttribute('data-theme') === 'dark';
+    body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+    toggle.querySelector('i').className = isDark ? 'fa-solid fa-moon' : 'fa-solid fa-sun';
+});
